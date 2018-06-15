@@ -14,6 +14,12 @@ class RoomList extends Component {
   	const room = snapshot.val();    
     this.setState({ rooms: this.state.rooms.concat( room ) });
     	});
+  }
+
+createRoom(){
+  this.roomsRef.push({
+  name: newRoomName //new room name is input text in Form 
+ });
 }
 
 render() {
@@ -22,10 +28,19 @@ render() {
 	       {this.state.rooms.map ((room, index) => 
 	         <li key={index}>
 	           {room.name}
-	         </li>
+	         </li> 
            )
          }
        </section>
+       <div className='create-room-form'>
+        <form action="" method="post">
+          <fieldset>
+            <input type="text" id="createChatRoom">
+            <label for="createChatRoom">New Room</label>
+            <input type="submit" value="Submit"> 
+          </fieldset>
+        </form>
+       </div>
     );
   }
 }
