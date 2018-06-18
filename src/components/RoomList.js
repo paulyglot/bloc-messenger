@@ -24,6 +24,7 @@ handleChange(e) {
 }
 
 handleRoomSubmit(e){
+  e.preventDefault();
   if (this.state.nameNewRoom) {
     this.setState({nameNewRoom: ''});
     this.roomsRef.push({name: this.state.nameNewRoom,});
