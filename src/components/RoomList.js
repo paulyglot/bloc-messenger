@@ -50,10 +50,8 @@ render() {
            </form>
          </section>
          <section id="room-list">
-           {this.state.rooms.map ((room, index) => 
-             <li key={index}>
-               {room.name}
-             </li> 
+           {this.state.rooms.map ((room, index) =>
+             <li key={index} onClick={() => this.props.setRoom(room)}>{room.name}</li> 
              )
            }
          </section>

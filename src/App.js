@@ -15,6 +15,18 @@ var config = {
 firebase.initializeApp(config);
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = { 
+      activeRoom: '',
+    };
+  };
+
+  setRoom=(roomId)=> {
+    this.setState({activeRoom: roomId});
+    console.log(roomId)
+  }
+
   render() {
     return (
       <section>
@@ -24,10 +36,10 @@ class App extends Component {
               <h1 className="site-header">Welcome to Bloc Messenger</h1>
             </nav>
           </header>        
-            <RoomList firebase={firebase} />
+            <RoomList firebase={firebase} setRoom={this.setRoom}/>
             
         </div>    
-        <MessageList firebase={firebase} />    
+       
       </section>
     );
   }
