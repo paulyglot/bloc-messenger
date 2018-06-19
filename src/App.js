@@ -18,28 +18,26 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = { 
-      activeRoom: '',
-    };
+      activeRoom: ''};
+
+  this.setRoom = this.setRoom.bind(this);
   };
 
-  setRoom=(roomId)=> {
-    this.setState({activeRoom: roomId});
-    console.log(roomId)
+  setRoom(room) {
+    this.setState({ activeRoom: room });
+    console.log(this.state.activeRoom)
   }
 
   render() {
     return (
       <section>
-        <div className="App">
-          <header className="App-header">
-            <nav>
-              <h1 className="site-header">Welcome to Bloc Messenger</h1>
-            </nav>
-          </header>        
-            <RoomList firebase={firebase} setRoom={this.setRoom}/>
-            
-        </div>    
-       
+        <nav>
+          <h1>Bloc Messenger</h1>
+        </nav>
+          <div className="container">
+            <RoomList firebase={firebase} activeRoom={ this.state.activeRoom } setRoom={this.setRoom} />
+            <MessageList firebase={ firebase } activeRoom={ this.state.activeRoom } />
+          </div>
       </section>
     );
   }
