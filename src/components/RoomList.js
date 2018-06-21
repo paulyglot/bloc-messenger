@@ -33,17 +33,9 @@ handleChange(e) {
 }
 
 handleRoomSubmit(e){
-<<<<<<< HEAD
-  e.preventDefault();
-  if (this.state.nameNewRoom) {
-    this.setState({nameNewRoom: ''});
-    this.roomsRef.push({name: this.state.nameNewRoom,});
-  }
-=======
   this.createRoom();
   e.preventDefault();
   this.setState({nameNewRoom: ''});
->>>>>>> blocMessenger-listMessages
 }
 
 render() {
