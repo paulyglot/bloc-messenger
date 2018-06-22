@@ -18,6 +18,7 @@ createMessage(){
     this.messagesRef.push({
       content: this.state.nameNewMessage,
       roomId: this.props.activeRoom.key,
+      username: this.props.user.displayName,
   });
 }
 
