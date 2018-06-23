@@ -47,8 +47,8 @@ class App extends Component {
     return (
       <section>
         <nav>
-          <h1 className="App-header">Bloc Messenger</h1>
-          <User firebase={ firebase } setUser={this.setUser} user={ this.state.activeUser } />
+          <h2 className="App-header">Bloc Messenger</h2>
+          <User className="user-header" firebase={ firebase } setUser={this.setUser} user={ this.state.activeUser } />
         </nav>
         { this.state.activeUser ? 
           <div className="container">

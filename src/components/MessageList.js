@@ -43,7 +43,7 @@ handleChange(e) {
 render() {
     return (
       <div className='message-list'>
-      <h3 className='room-name'>{ this.props.activeRoom ? this.props.activeRoom.name : 'Please select a room' }</h3>
+      <h4 className='room-name'>{ this.props.activeRoom ? this.props.activeRoom.name : '' }</h4>
       <ul>
         { this.state.messages.filter(message => message.roomId === this.props.activeRoom.key).map((message, index) => (<li key={index}> <b>{message.username}</b> <br /> {message.content} </li>),
       )}
