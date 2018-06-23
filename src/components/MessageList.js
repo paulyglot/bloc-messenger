@@ -33,7 +33,7 @@ componentDidMount() {
 handleMessageSubmit(e){
   e.preventDefault();
   this.createMessage();
-  this.setState({newmessage: ''});
+  this.setState({nameNewMessage: ''});
 }
 
 handleChange(e) {
@@ -49,7 +49,7 @@ render() {
       )}
       </ul>
         <form onSubmit={this.handleMessageSubmit}>
-            <input value={this.state.nameNewmessage} onChange={this.handleChange} />
+            <input type="text" value={this.state.nameNewMessage} placeholder="enter message" onChange={this.handleChange} />
           <input type="submit" value="Submit" />
         </form>
     </div>
