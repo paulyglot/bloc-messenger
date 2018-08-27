@@ -1,59 +1,98 @@
-/*~~~~~~~~~~~~~~~~~~~~~~GLOBAL~~~~~~~~~~~~~~~~~~~~~~~*/
-nav {
-  background: #ffffff;
+.App {
   text-align: center;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Poiret One', cursive;
-  font-weight: bold;
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
-p {
-  font-size: 15px;
-  font-weight: bold;
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 ul {
   list-style: none;
   margin: 0px;
   padding: 20px;
-  width: 100%;
-  background-color: white;
+  width: 200px;
+  background-color: #f1f1f1;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~APP~~~~~~~~~~~~~~~~~~~~~~*/
-.App-header {
-  background-color: black;
-  height: 50px;
-  padding: 7px;
-  color: white;
-  top: 0;
-  width: 100%
-}
-nav {
-  background: black;
-  padding: .5rem .5rem;
-  display: flex;  
-  color: white;
-}
-/*~~~~~~~~~~~~~~~~~~~~~~ROOM~~~~~~~~~~~~~~~~~~~~~~*/
+
 .room-list ul li {
   padding: 4px;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~MESSAGES~~~~~~~~~~~~~~~~~~~~~~*/
+
 .message-list ul li {
-  padding: 4px;
+  padding: 15px;
 }
+
 .message-list {
   height: 100vh;
   flex: 1;
-  background: white;
-  padding: 4px;
+  background: aliceblue;
+  padding: 10px 0 0 40px;
   margin-bottom: 0 auto -50px;
 }
+
+.message-list ul {
+  padding: 0 0 0 0;
+}
+
+.message-list ul li:nth-child(odd) {
+  background: #dedede;
+}
+
+.message-list ul li b{
+  color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+}
+
 .container {
   display: flex;
   height: 100%;
   width: 100%;
-  
+  justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
   margin-top: 80px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: black;
+  padding: .5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
