@@ -23,37 +23,62 @@ ul {
   background-color: black;
   height: 50px;
   padding: 7px;
+  text-align: left;
   color: white;
   top: 0;
-  width: 100%
+  width: 100%;
 }
+
 nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   background: black;
-  padding: .5rem .5rem;
-  display: flex;  
+  padding: .5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
   color: white;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~ROOM~~~~~~~~~~~~~~~~~~~~~~*/
 .room-list ul li {
-  padding: 4px;
+  margin-bottom: 8px;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~MESSAGES~~~~~~~~~~~~~~~~~~~~~~*/
-.message-list ul li {
-  padding: 4px;
+.room-name {
+  margin-bottom: 30px;
 }
+
+.message-list ul li {
+  padding: 15px;
+}
+
 .message-list {
   height: 100vh;
   flex: 1;
-  background: white;
-  padding: 4px;
+  padding: 10px 0 0 40px;
   margin-bottom: 0 auto -50px;
+}
+
+.message-list ul {
+  padding: 0 0 0 0;
+}
+
+.message-list ul li:nth-child(odd) {
+  background: #edf0f4;
+}
+
+.message-list ul li b{
+  color: black;
 }
 .container {
   display: flex;
   height: 100%;
   width: 100%;
-  
+  justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
   margin-top: 80px;
 }
+
