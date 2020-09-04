@@ -6,7 +6,7 @@
     "ajv-keywords": "^3.2.0",
     "extend": "^3.0.2",
     "firebase": "^5.0.4",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.4.5",
     "merge": "^1.2.1",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
